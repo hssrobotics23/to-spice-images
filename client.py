@@ -152,9 +152,9 @@ SPICES = SEASONINGS + [
 ]
 SPICES.sort()
 C = 5
-TRIES = 12
+TRIES = 8
 VERSION = '3-3-0'
-CHECK = min(TRIES, 10)
+CHECK = min(TRIES, 8)
 PREFIX = 'small square paper label'
 SEARCH = 'small square paper label'
 FOLDER = f'spices-v-{VERSION}-check-{CHECK}-of-{TRIES}'
