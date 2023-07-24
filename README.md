@@ -63,6 +63,34 @@ python3 -m jina flow --uses flow.tmp.yml
 
 ```
 
+## Running with Docker
+
+#### TODO 
+
+```
+
+```
+
+
+## Building Docker package
+
+The build was run on an `1x A10 (24 GB PCIe)` instance [through Lambda Labs](https://cloud.lambdalabs.com/instances), using these steps to log in as the root user. If you don't have an SSH key, run `run `ssh-keygen -t ed25519 -C "email@example.com"`. Use the output from `cat ~/.ssh/id_ed25519.pub` to [add as a lambda labs SSH key](https://cloud.lambdalabs.com/ssh-keys). Now, copy the login IP [from the Lambda Labs instance](https://cloud.lambdalabs.com/instances), such as `ssh ubuntu@203.0.113.123`, to your shell. Once connected, run `sudo passwd root`, updating the root password, and run `su`, entering the new root password. Next, build the docker container using your `dockerhub_username` as a prefix.
+
+```
+git clone https://github.com/thejohnhoffer/dalle-flow.git
+DOCKERHUB_USERNAME="dockerhub_username" && cd dalle-flow
+docker build --build-arg GROUP_ID=$(id -g ${USER}) --build-arg USER_ID=$(id -u ${USER}) -t $DOCKERHUB_USERNAME/to-spice-images .
+```
+
+Publishing to Docker Hub, again using your dockerhub username.
+
+```
+docker login --username="$DOCKERHUB_USERNAME"
+DOCKER_TAG=$(docker images | awk '/to-spice-images/{ print $3 }')
+docker tag "$DOCKER_TAG" "$DOCKERHUB_USERNAME/to-spice-images:v3.3.0"
+docker push "$DOCKERHUB_USERNAME/to-spice-images"
+```
+
 ## Dall-E Client
 
 In a separate shell on the same instance, run:
