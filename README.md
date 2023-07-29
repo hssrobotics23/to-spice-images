@@ -22,6 +22,7 @@ git clone https://github.com/jina-ai/glid-3-xl.git
 git clone https://github.com/thejohnhoffer/clipseg.git
 
 cd dalle-flow
+pip install virtualenv
 python3 -m virtualenv env
 source env/bin/activate
 pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu116
