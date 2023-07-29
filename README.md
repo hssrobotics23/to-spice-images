@@ -59,6 +59,7 @@ wget -O ./stable-diffusion/models/ldm/stable-diffusion-v1/model.ckpt https://hug
 cd dalle-flow
 pip install jina==3.11.2
 pip install -U docarray==0.21.0
+pip install jax[cuda11_cudnn82]~=0.3.25 -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
 python3 flow_parser.py --enable-stable-diffusion --enable-clipseg
 python3 -m jina flow --uses flow.tmp.yml
 ```
