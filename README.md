@@ -48,7 +48,7 @@ cd -
 cd dalle-flow
 python3 -m pip install Cython
 python3 -m pip install -r requirements.txt
-pip install git+https://github.com/fang2020shu/dalle-mini
+pip install git+https://github.com/thejohnhoffer/dalle-mini
 pip install jax[cuda11_cudnn82]~=0.3.25 -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
 python3 -m pip install -U jaxlib==0.3.25+cuda11.cudnn82 -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
 python3 -m pip install pytorch-lightning==v1.7.7
