@@ -14,7 +14,7 @@ sudo apt-get update
 pip install -U pip
 
 mkdir dalle && cd dalle
-git clone https://github.com/hssrobotics23/dalle-flow.git
+git clone https://github.com/thejohnhoffer/dalle-flow.git
 git clone https://github.com/jina-ai/SwinIR.git
 git clone https://github.com/CompVis/latent-diffusion.git
 git clone https://github.com/jina-ai/glid-3-xl.git
@@ -25,14 +25,17 @@ cd dalle-flow
 pip install virtualenv
 python3 -m virtualenv env
 source env/bin/activate
-pip install torch==2.0.1 --extra-index-url https://download.pytorch.org/whl/cu116
-pip install torchvision==0.15.2 --extra-index-url https://download.pytorch.org/whl/cu116
-pip install torchaudio==2.0.2 --extra-index-url https://download.pytorch.org/whl/cu116
+pip install torch==2.0.1 --extra-index-url https://download.pytorch.org/whl/cu118
+pip install torchvision==0.15.2 --extra-index-url https://download.pytorch.org/whl/cu118
+pip install torchaudio==2.0.2 --extra-index-url https://download.pytorch.org/whl/cu118
 pip install numpy~=1.24.4
 pip install tqdm==4.65.0
 pip install omegaconf==2.3.0
 pip install einops==0.6.1
 pip install pytorch_lightning==2.0.5
+pip install basicsr==1.4.2
+pip install facexlib==0.3.0
+pip install gfpgan==1.3.8
 pip install realesrgan==0.3.0
 pip install xformers==0.0.21.dev573
 cd -
@@ -59,6 +62,7 @@ wget https://dall-3.com/models/glid-3-xl/finetune.pt
 cd -
 
 cd dalle-flow
+pip install Cython==3.0.0
 pip install -r requirements.txt
 pip install jina==3.11.2
 pip install -U tb-nightly==2.12.0a20230118
