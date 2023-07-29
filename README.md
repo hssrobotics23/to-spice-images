@@ -38,7 +38,7 @@ pip install basicsr==1.4.2
 pip install facexlib==0.3.0
 pip install gfpgan==1.3.8
 pip install realesrgan==0.3.0
-pip install xformers==0.0.21.dev573
+pip install xformers==0.0.20
 cd -
 cd k-diffusion
 pip install -e .
