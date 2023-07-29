@@ -52,12 +52,11 @@ python3 -m pip install transformers==4.25.1
 python3 -m pip install torchmetrics==0.11.4
 cd -
 cd dalle-flow
-python3 -m pip install jaxlib jax
+python3 -m pip install jaxlib==0.3.25 jax==0.3.25
 python3 -m pip install jina==3.11.2
 python3 -m pip install -U docarray==0.21.0
 python3 flow_parser.py --enable-clipseg
 python3 -m jina flow --uses flow.tmp.yml
-
 ```
 
 ## Running with Docker
