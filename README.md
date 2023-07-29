@@ -6,7 +6,7 @@ A pre-generated dataset is publicly hosted on AWS, [for a demo in the jupyter no
 
 ## Dall-E Server
 
-Launch `1x A10 (24 GB PCIe)` instance [with Lambda Labs](https://cloud.lambdalabs.com/instances), then ssh and run:
+Note-- issue with [dalle-mini](https://github.com/borisdayma/dalle-mini/issues/330). Launch `1x A10 (24 GB PCIe)` instance [with Lambda Labs](https://cloud.lambdalabs.com/instances), then ssh and run:
 
 
 ```
