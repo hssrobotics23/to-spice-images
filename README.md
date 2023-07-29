@@ -58,6 +58,7 @@ mkdir ./stable-diffusion/models/ldm/stable-diffusion-v1
 wget -O ./stable-diffusion/models/ldm/stable-diffusion-v1/model.ckpt https://huggingface.co/runwayml/stable-diffusion-inpainting/resolve/main/sd-v1-5-inpainting.ckpt
 cd dalle-flow
 pip install jina==3.11.2
+pip install -U docarray==0.21.0
 python3 flow_parser.py --enable-stable-diffusion --enable-clipseg
 python3 -m jina flow --uses flow.tmp.yml
 
