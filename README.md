@@ -12,8 +12,6 @@ Note-- issue with [dalle-mini](https://github.com/borisdayma/dalle-mini/issues/3
 ```
 sudo apt-get update
 pip install -U pip
-python3 -m virtualenv env
-source env/bin/activate
 
 mkdir dalle && cd dalle
 git clone https://github.com/thejohnhoffer/dalle-flow.git
