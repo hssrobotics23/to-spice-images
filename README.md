@@ -11,7 +11,6 @@ Launch `1x A10 (24 GB PCIe)` instance [with Lambda Labs](https://cloud.lambdalab
 
 ```
 sudo chown ubuntu:docker /var/run/docker.sock
-
 sudo apt-get update
 sudo apt-get install make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
 curl https://pyenv.run | bash
@@ -21,6 +20,7 @@ echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
 exec $SHELL
 pyenv install 3.10.12
 pyenv global 3.10.12
+python3 -m pip install --upgrade pip
 mkdir dalle && cd dalle
 git clone https://github.com/thejohnhoffer/dalle-flow.git
 git clone https://github.com/jina-ai/SwinIR.git
@@ -31,12 +31,10 @@ git clone https://github.com/timojl/clipseg.git
 python3 -m pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu118
 python3 -m pip install numpy tqdm pytorch_lightning einops numpy omegaconf
 python3 -m pip install https://github.com/crowsonkb/k-diffusion/archive/master.zip
-python3 -m pip install git+https://github.com/AmericanPresidentJimmyCarter/stable-diffusion.git@v0.0.15
 python3 -m pip install basicsr facexlib gfpgan
 python3 -m pip install realesrgan
 python3 -m pip install xformers
 cd latent-diffusion && python3 -m pip install -e . && cd -
-cd stable-diffusion && python3 -m pip install -e . && cd -
 cd SwinIR && python3 -m pip install -e . && cd -
 cd glid-3-xl && python3 -m pip install -e . && cd -
 cd clipseg && python3 -m pip install -e . && cd -
@@ -53,13 +51,10 @@ python3 -m pip install pytorch-lightning==v1.7.7
 python3 -m pip install transformers==4.25.1
 python3 -m pip install torchmetrics==0.11.4
 cd -
-export JINA_AUTH_TOKEN="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"
-mkdir ./stable-diffusion/models/ldm/stable-diffusion-v1
-wget -O ./stable-diffusion/models/ldm/stable-diffusion-v1/model.ckpt https://huggingface.co/runwayml/stable-diffusion-inpainting/resolve/main/sd-v1-5-inpainting.ckpt
 cd dalle-flow
-pip install jax==0.3.25
-pip install jina==3.11.2
-pip install -U docarray==0.21.0
+python3 -m pip install jaxlib jax
+python3 -m pip install jina==3.11.2
+python3 -m pip install -U docarray==0.21.0
 python3 flow_parser.py --enable-clipseg
 python3 -m jina flow --uses flow.tmp.yml
 
