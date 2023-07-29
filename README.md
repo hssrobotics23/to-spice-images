@@ -70,6 +70,9 @@ python3 -m jina flow --uses flow.tmp.yml
 #### TODO 
 
 ```
+sudo chown ubuntu:docker /var/run/docker.sock
+docker pull thejohnhoffer/to-spice-images:latest
+docker run -e ENABLE_CLIPSEG --network host -it -v $HOME/.cache:/home/dalle/.cache --gpus all thejohnhoffer/to-spice-images
 
 ```
 
