@@ -28,7 +28,7 @@ source env/bin/activate
 pip install torch==2.0.1 --extra-index-url https://download.pytorch.org/whl/cu116
 pip install torchvision==0.15.2 --extra-index-url https://download.pytorch.org/whl/cu116
 pip install torchaudio==2.0.2 --extra-index-url https://download.pytorch.org/whl/cu116
-pip install numpy~=1.25.1
+pip install numpy~=1.24.4
 pip install tqdm==4.65.0
 pip install omegaconf==2.3.0
 pip install einops==0.6.1
