@@ -59,7 +59,6 @@ cd dalle-flow
 pip install -r requirements.txt
 
 #try 1
-pip install -r requirements.txt
 pip install -U jaxlib==0.3.25+cuda11.cudnn82 -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
 pip install pytorch-lightning==v1.7.7
 pip install transformers==4.25.1
