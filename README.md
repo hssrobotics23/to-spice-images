@@ -42,9 +42,6 @@ cd -
 cd latent-diffusion
 pip install -e .
 cd -
-cd latent-diffusion
-pip install -e .
-cd -
 cd SwinIR
 pip install -e .
 cd -
