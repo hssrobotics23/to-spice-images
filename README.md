@@ -32,6 +32,7 @@ pip install git+https://github.com/AmericanPresidentJimmyCarter/stable-diffusion
 pip install basicsr facexlib gfpgan
 pip install realesrgan
 pip install xformers
+cd -
 cd latent-diffusion
 pip install -e .
 cd -
