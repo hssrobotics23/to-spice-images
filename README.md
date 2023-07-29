@@ -79,6 +79,11 @@ pip install -U docarray==0.21.0
 pip install git+https://github.com/fang2020shu/dalle-mini.git
 pip install taming-transformers-rom1504
 
+pip install torch==2.0.1 --extra-index-url https://download.pytorch.org/whl/cu118
+pip install torchvision==0.15.2 --extra-index-url https://download.pytorch.org/whl/cu118
+pip install torchaudio==2.0.2 --extra-index-url https://download.pytorch.org/whl/cu118
+
+
 python3 flow_parser.py --enable-clipseg
 python3 -m jina flow --uses flow.tmp.yml
 ```
