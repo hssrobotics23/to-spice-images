@@ -60,7 +60,7 @@ cd dalle-flow
 pip install jax==0.3.25
 pip install jina==3.11.2
 pip install -U docarray==0.21.0
-python3 flow_parser.py --enable-stable-diffusion --enable-clipseg
+python3 flow_parser.py --enable-clipseg
 python3 -m jina flow --uses flow.tmp.yml
 
 ```
