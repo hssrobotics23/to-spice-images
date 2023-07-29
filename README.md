@@ -66,10 +66,10 @@ pip install Cython==3.0.0
 pip install -r requirements.txt
 pip install jina==3.11.2
 pip install -U tb-nightly==2.12.0a20230118
-pip install -U pydantic==1.10.12
-pip install -U docarray==0.21.0
-pip install -U jaxlib==0.3.25+cuda11.cudnn82 -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
-pip install jax[cuda11_cudnn82]~=0.3.25 -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
+pip install -U flax==0.7.0
+pip install -U transformers==4.25.1
+pip install -U jaxlib==0.4.13+cuda11.cudnn86 -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
+pip install jax[cuda11_cudnn86]~=0.4.13 -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
 
 python3 flow_parser.py --enable-clipseg
 python3 -m jina flow --uses flow.tmp.yml
