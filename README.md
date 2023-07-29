@@ -16,28 +16,32 @@ pip install -U pip
 mkdir dalle && cd dalle
 git clone https://github.com/hssrobotics23/dalle-flow.git
 git clone https://github.com/jina-ai/SwinIR.git
-git clone --branch v0.0.15 https://github.com/AmericanPresidentJimmyCarter/stable-diffusion.git
 git clone https://github.com/CompVis/latent-diffusion.git
 git clone https://github.com/jina-ai/glid-3-xl.git
 git clone https://github.com/thejohnhoffer/clipseg.git
+git cloen https://github.com/crowsonkb/k-diffusion.git
 
 cd dalle-flow
 pip install virtualenv
 python3 -m virtualenv env
 source env/bin/activate
 pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu116
-pip install numpy tqdm pytorch_lightning einops numpy omegaconf
-pip install https://github.com/crowsonkb/k-diffusion/archive/master.zip
-pip install git+https://github.com/AmericanPresidentJimmyCarter/stable-diffusion.git@v0.0.15
-pip install basicsr facexlib gfpgan
-pip install realesrgan
-pip install xformers
+pip install numpy~=1.25.1
+pip install tqdm==4.65.0
+pip install omegaconf==2.3.0
+pip install einops==0.6.1
+pip install pytorch_lightning==2.0.5
+pip install realesrgan==0.3.0
+pip install xformers==0.0.21.dev573
+cd -
+cd k-diffusion
+pip install -e .
 cd -
 cd latent-diffusion
 pip install -e .
 cd -
-cd stable-diffusion
-pip install .
+cd latent-diffusion
+pip install -e .
 cd -
 cd SwinIR
 pip install -e .
