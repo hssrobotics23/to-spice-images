@@ -18,11 +18,14 @@ source env/bin/activate
 mkdir dalle && cd dalle
 git clone https://github.com/thejohnhoffer/dalle-flow.git
 git clone https://github.com/jina-ai/SwinIR.git
+git clone --branch v0.0.15 https://github.com/AmericanPresidentJimmyCarter/stable-diffusion.git
 git clone https://github.com/CompVis/latent-diffusion.git
 git clone https://github.com/jina-ai/glid-3-xl.git
 git clone https://github.com/timojl/clipseg.git
 
 cd dalle-flow
+python3 -m virtualenv env
+source env/bin/activate
 python3 pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu116
 pip install numpy tqdm pytorch_lightning einops numpy omegaconf
 pip install https://github.com/crowsonkb/k-diffusion/archive/master.zip
