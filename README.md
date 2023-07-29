@@ -49,8 +49,9 @@ cd -
 cd dalle-flow
 python3 -m pip install Cython
 python3 -m pip install -r requirements.txt
-#python3 -m pip install jax[cuda11_cudnn86]~=0.4.13 -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
+#python3 -m pip install -U jax[cuda11_cudnn86]~=0.4.13 -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
 python3 -m pip install -U jaxlib==0.4.13+cuda11.cudnn86 -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
+pip install jax==0.4.13
 python3 -m pip install pytorch-lightning==v1.7.7
 cd -
 export JINA_AUTH_TOKEN="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"
