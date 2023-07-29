@@ -60,6 +60,7 @@ python3 -m pip install dalle-mini
 python3 -m pip install jaxlib==0.3.25 jax==0.3.25
 python3 -m pip install git+https://github.com/patil-suraj/vqgan-jax
 python3 -m pip install taming-transformers-rom1504
+python3 -m pip install -U pytorch-lightning
 python3 flow_parser.py --enable-clipseg
 python3 -m jina flow --uses flow.tmp.yml
 ```
