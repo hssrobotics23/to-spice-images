@@ -57,6 +57,7 @@ python3 -m pip install jina==3.11.2
 python3 -m pip install -U docarray==0.21.0
 python3 -m pip install timm
 python3 -m pip install jaxlib==0.3.25 -f https://storage.googleapis.com/jax-releases/jax_releases.html
+python3 -m pip install orbax==0.1.7
 python3 -m pip install dalle-mini
 python3 flow_parser.py --enable-clipseg
 python3 -m jina flow --uses flow.tmp.yml
