@@ -77,6 +77,7 @@ pip install -U pydantic==1.10.12
 pip install -U starlette==0.22.0
 pip install -U docarray==0.21.0
 pip install git+https://github.com/fang2020shu/dalle-mini.git
+pip install taming-transformers-rom1504
 
 python3 flow_parser.py --enable-clipseg
 python3 -m jina flow --uses flow.tmp.yml
