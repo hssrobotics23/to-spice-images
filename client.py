@@ -126,34 +126,20 @@ def max_contour_area(contours):
 
 def yield_prompts(prefix, spices):
     for spice in spices:
-        yield (
-            f'Photograph in pantry of a name-brand plastic spice jar with a {prefix} for the {spice} ',
-            f'Photograph in pantry of a name-brand plastic spice jar with a {prefix} for the {spice} ',
+        yield 150*(
             f'Photograph in pantry of a name-brand plastic spice jar with a {prefix} for the {spice} ',
         )
 
 PORTS = sys.argv[1:5]
-SEASONINGS = [
-'baharat seasoning', 'chili powder', 'chinese five-spice powder',
-'curry powder', 'dukkah', 'garam masala', 'herbes de provence',
-'italian seasoning', 'lemon pepper', 'mojo seasoning', 'old bay seasoning', 'pickling spice',
-'pumpkin pie spice', 'rainbow sprinkles', 'ras el hanout', 'za\'atar seasoning',
-]
-SPICES = SEASONINGS + [
-'allspice', 'ancho powder', 'annatto seeds', 'basil', 'bay leaves', 'black pepper',
-'cardamom', 'carom seeds', 'caraway seeds', 'cayenne pepper', 'celery seeds',
-'chervil', 'chia seeds', 'chives', 'chipotle powder', 'cinnamon',
-'coriander', 'cream of tartar', 'cumin', 'dill', 'fennel seeds', 'fenugreek', 'flax seeds',
-'garlic powder', 'ginger', 'gochugaru', 'grains of paradise', 'ground cloves',
-'kosher salt', 'loomi', 'mace', 'mahlab', 'mango powder', 'marjoram', 'mint', 'mustard powder',
-'nutmeg', 'onion powder', 'oregano', 'paprika', 'parsley', 'pickling salt', 'poppy seeds',
-'red pepper flakes', 'rosemary', 'sage', 'saffron', 'sea salt', 'sesame seeds', 'sichuan pepper',
-'smoked paprika', 'star anise', 'sumac', 'thyme', 'turmeric', 'white pepper'
+SPICES = [
+'salt', 'fennel', 'caraway', 'cloves', 'nutmeg', 'tumeric',
+'cardamom', 'fenugreek', 'anise', 'cumin', 'chiles', 'saffron',
+'sumac', 'allspice', 'cinnamon', 'peppercorns', 'coriander'
 ]
 SPICES.sort()
 C = 5
 TRIES = 8
-VERSION = '3-3-0'
+VERSION = '3-4-0'
 CHECK = min(TRIES, 8)
 PREFIX = 'small square paper label'
 SEARCH = 'small square paper label'
