@@ -19,13 +19,15 @@ git clone https://github.com/jina-ai/SwinIR.git
 git clone https://github.com/CompVis/latent-diffusion.git
 git clone https://github.com/jina-ai/glid-3-xl.git
 git clone https://github.com/thejohnhoffer/clipseg.git
-git cloen https://github.com/crowsonkb/k-diffusion.git
+git clone https://github.com/crowsonkb/k-diffusion.git
 
 cd dalle-flow
 pip install virtualenv
 python3 -m virtualenv env
 source env/bin/activate
-pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu116
+pip install torch==2.0.1 --extra-index-url https://download.pytorch.org/whl/cu116
+pip install torchvision==0.15.2 --extra-index-url https://download.pytorch.org/whl/cu116
+pip install torchaudio==2.0.2 --extra-index-url https://download.pytorch.org/whl/cu116
 pip install numpy~=1.25.1
 pip install tqdm==4.65.0
 pip install omegaconf==2.3.0
