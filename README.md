@@ -10,17 +10,9 @@ Note-- issue with [dalle-mini](https://github.com/borisdayma/dalle-mini/issues/3
 
 
 ```
-sudo chown ubuntu:docker /var/run/docker.sock
 sudo apt-get update
 pip install -U pip
-
-curl https://pyenv.run | bash
-echo 'export PATH="$HOME/.pyenv/bin:$PATH"' >> ~/.bashrc
-echo 'eval "$(pyenv init --path)"' >> ~/.bashrc
-echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
-exec $SHELL
-pyenv install 3.10.12
-pyenv global 3.10.12
+python3 -m virtualenv env
 
 mkdir dalle && cd dalle
 git clone https://github.com/thejohnhoffer/dalle-flow.git
