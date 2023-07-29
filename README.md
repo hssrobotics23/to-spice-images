@@ -58,7 +58,7 @@ cd dalle-flow
 pip install -r requirements.txt
 pip install jaxlib~=0.3.25
 pip install jax~=0.3.25
-pip install jina==3.19.0
+pip install jina~=3.19.0
 
 python3 flow_parser.py --enable-clipseg
 python3 -m jina flow --uses flow.tmp.yml
