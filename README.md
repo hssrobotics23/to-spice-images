@@ -14,7 +14,7 @@ sudo apt-get update
 pip install -U pip
 
 mkdir dalle && cd dalle
-git clone https://github.com/jina-ai/dalle-flow.git
+git clone https://github.com/hssrobotics23/dalle-flow.git
 git clone https://github.com/jina-ai/SwinIR.git
 git clone --branch v0.0.15 https://github.com/AmericanPresidentJimmyCarter/stable-diffusion.git
 git clone https://github.com/CompVis/latent-diffusion.git
