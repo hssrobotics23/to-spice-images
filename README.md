@@ -60,6 +60,7 @@ wget -O ./stable-diffusion/models/ldm/stable-diffusion-v1/model.ckpt https://hug
 cd dalle-flow
 python3 -m pip install jina==3.11.2
 python3 -m pip install -U docarray==0.21.0
+python3 -m pip install torchmetrics==0.11.4
 python3 flow_parser.py --enable-stable-diffusion --enable-clipseg
 python3 -m jina flow --uses flow.tmp.yml
 ```
