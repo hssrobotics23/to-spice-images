@@ -72,6 +72,12 @@ pip install -U transformers==4.25.1
 pip install -U jaxlib==0.4.13+cuda11.cudnn86 -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
 pip install jax[cuda11_cudnn86]~=0.4.13 -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
 
+pip install -U lightning==2.0.1
+pip install -U pydantic==1.10.12
+pip install -U starlette==0.22.0
+pip install -U docarray==0.21.0
+pip install git+https://github.com/fang2020shu/dalle-mini.git
+
 python3 flow_parser.py --enable-clipseg
 python3 -m jina flow --uses flow.tmp.yml
 ```
