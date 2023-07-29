@@ -48,6 +48,8 @@ cd -
 cd dalle-flow
 python3 -m pip install Cython
 python3 -m pip install -r requirements.txt
+pip install git+https://github.com/fang2020shu/dalle-mini
+pip install jax[cuda11_cudnn82]~=0.3.25 -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
 python3 -m pip install -U jaxlib==0.3.25+cuda11.cudnn82 -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
 python3 -m pip install pytorch-lightning==v1.7.7
 python3 -m pip install transformers==4.25.1
@@ -59,9 +61,7 @@ wget -O ./stable-diffusion/models/ldm/stable-diffusion-v1/model.ckpt https://hug
 cd dalle-flow
 pip install jina==3.11.2
 pip install -U docarray==0.21.0
-pip install jax[cuda11_cudnn82]~=0.3.25 -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
 pip install timm==0.4.12
-pip install git+https://github.com/fang2020shu/dalle-mini
 python3 flow_parser.py --enable-stable-diffusion --enable-clipseg
 python3 -m jina flow --uses flow.tmp.yml
 ```
