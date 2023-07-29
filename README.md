@@ -19,7 +19,7 @@ git clone https://github.com/jina-ai/SwinIR.git
 git clone --branch v0.0.15 https://github.com/AmericanPresidentJimmyCarter/stable-diffusion.git
 git clone https://github.com/CompVis/latent-diffusion.git
 git clone https://github.com/jina-ai/glid-3-xl.git
-git clone https://github.com/timojl/clipseg.git
+git clone https://github.com/thejohnhoffer/clipseg.git
 
 cd dalle-flow
 python3 -m virtualenv env
