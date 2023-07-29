@@ -56,13 +56,14 @@ cd -
 
 cd dalle-flow
 pip install -r requirements.txt
-pip install jaxlib~=0.3.25
-pip install jax~=0.3.25
 pip install jina~=3.19.0
 pip install tb-nightly==2.12.0a20230118
 pip install dalle-mini==0.1.3
 pip install orbax==0.1.7
 pip install flax==0.6.3
+pip install jaxlib~=0.3.25
+pip install jax~=0.3.25
+
 
 python3 flow_parser.py --enable-clipseg
 python3 -m jina flow --uses flow.tmp.yml
