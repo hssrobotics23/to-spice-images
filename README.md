@@ -12,7 +12,8 @@ Note-- issue with [dalle-mini](https://github.com/borisdayma/dalle-mini/issues/3
 ```
 sudo chown ubuntu:docker /var/run/docker.sock
 sudo apt-get update
-sudo apt-get install make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
+pip install -U pip
+
 curl https://pyenv.run | bash
 echo 'export PATH="$HOME/.pyenv/bin:$PATH"' >> ~/.bashrc
 echo 'eval "$(pyenv init --path)"' >> ~/.bashrc
@@ -20,50 +21,38 @@ echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
 exec $SHELL
 pyenv install 3.10.12
 pyenv global 3.10.12
-/usr/bin/python3 -m pip install --upgrade pip
+
 mkdir dalle && cd dalle
 git clone https://github.com/thejohnhoffer/dalle-flow.git
 git clone https://github.com/jina-ai/SwinIR.git
-git clone --branch v0.0.15 https://github.com/AmericanPresidentJimmyCarter/stable-diffusion.git
 git clone https://github.com/CompVis/latent-diffusion.git
 git clone https://github.com/jina-ai/glid-3-xl.git
 git clone https://github.com/timojl/clipseg.git
-python3 -m pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu118
-python3 -m pip install numpy tqdm pytorch_lightning einops numpy omegaconf
-python3 -m pip install https://github.com/crowsonkb/k-diffusion/archive/master.zip
-python3 -m pip install basicsr facexlib gfpgan
-python3 -m pip install realesrgan
-python3 -m pip install xformers
-cd latent-diffusion && python3 -m pip install -e . && cd -
-cd SwinIR && python3 -m pip install -e . && cd -
-cd glid-3-xl && python3 -m pip install -e . && cd -
-cd clipseg && python3 -m pip install -e . && cd -
+
+cd dalle-flow
+python3 pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu116
+pip install numpy tqdm pytorch_lightning einops numpy omegaconf
+pip install https://github.com/crowsonkb/k-diffusion/archive/master.zip
+pip install git+https://github.com/AmericanPresidentJimmyCarter/stable-diffusion.git@v0.0.15
+pip install basicsr facexlib gfpgan
+pip install realesrgan
+pip install https://github.com/AmericanPresidentJimmyCarter/xformers-builds/raw/master/cu116/xformers-0.0.14.dev0-cp310-cp310-linux_x86_64.whl && \
+cd latent-diffusion && pip install -e . && cd -
+cd stable-diffusion && pip install -e . && cd -
+cd SwinIR && pip install -e . && cd -
+cd glid-3-xl && pip install -e . && cd -
+cd clipseg && pip install -e . && cd -
+
 cd glid-3-xl
 wget https://dall-3.com/models/glid-3-xl/bert.pt
 wget https://dall-3.com/models/glid-3-xl/kl-f8.pt
 wget https://dall-3.com/models/glid-3-xl/finetune.pt
 cd -
+
 cd dalle-flow
-python3 -m pip install Cython
-python3 -m pip install -r requirements.txt
-python3 -m pip install -U jaxlib==0.3.25+cuda11.cudnn82 -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
-python3 -m pip install pytorch-lightning==v1.7.7
-python3 -m pip install transformers==4.25.1
-python3 -m pip install torchmetrics==0.11.4
-cd -
-cd dalle-flow
-python3 -m pip install jina==3.11.2
-python3 -m pip install -U docarray==0.21.0
-python3 -m pip install timm
-python3 -m pip install orbax==0.1.2
-python3 -m pip install dalle-mini
-python3 -m pip install jaxlib==0.3.25 jax==0.3.25
-python3 -m pip install git+https://github.com/patil-suraj/vqgan-jax
-python3 -m pip install taming-transformers-rom1504
-python3 -m pip install -U tensorflow==2.9.0
-python3 -m pip install protobuf==3.20.1
-python3 -m pip install pytorch-lightning 1.7.7
-python3 -m pip install lightning-utilities==0.7.0
+pip install -r requirements.txt
+pip install jax~=0.3.24
+
 python3 flow_parser.py --enable-clipseg
 python3 -m jina flow --uses flow.tmp.yml
 ```
