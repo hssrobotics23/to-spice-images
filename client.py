@@ -126,7 +126,7 @@ def max_contour_area(contours):
 
 def yield_prompts(prefix, spices):
     for spice in spices:
-        yield 100*(
+        yield 150*(
             f'Photograph in pantry of a name-brand plastic spice jar with a {prefix} for the {spice} ',
         )
 
