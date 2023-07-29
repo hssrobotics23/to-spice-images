@@ -32,12 +32,22 @@ pip install https://github.com/crowsonkb/k-diffusion/archive/master.zip
 pip install git+https://github.com/AmericanPresidentJimmyCarter/stable-diffusion.git@v0.0.15
 pip install basicsr facexlib gfpgan
 pip install realesrgan
-pip install https://github.com/AmericanPresidentJimmyCarter/xformers-builds/raw/master/cu116/xformers-0.0.14.dev0-cp310-cp310-linux_x86_64.whl && \
-cd latent-diffusion && pip install -e . && cd -
-cd stable-diffusion && pip install -e . && cd -
-cd SwinIR && pip install -e . && cd -
-cd glid-3-xl && pip install -e . && cd -
-cd clipseg && pip install -e . && cd -
+pip install xformers
+cd latent-diffusion
+pip install -e .
+cd -
+cd stable-diffusion
+pip install -e .
+cd -
+cd SwinIR
+pip install -e .
+cd -
+cd glid-3-xl
+pip install -e .
+cd -
+cd clipseg
+pip install -e .
+cd -
 
 cd glid-3-xl
 wget https://dall-3.com/models/glid-3-xl/bert.pt
