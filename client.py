@@ -138,9 +138,9 @@ SPICES = [
 ]
 SPICES.sort()
 C = 5
-TRIES = 8
+TRIES = 4
 VERSION = '3-4-0'
-CHECK = min(TRIES, 8)
+CHECK = min(TRIES, 4)
 PREFIX = 'small square paper label'
 SEARCH = 'small square paper label'
 FOLDER = f'spices-v-{VERSION}-check-{CHECK}-of-{TRIES}'
