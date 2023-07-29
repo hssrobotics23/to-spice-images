@@ -10,7 +10,7 @@ Note-- issue with [dalle-mini](https://github.com/borisdayma/dalle-mini/issues/3
 
 
 ```
-sudo apt-get update
+sudo apt-get update -y
 pip install -U pip
 
 mkdir dalle && cd dalle
