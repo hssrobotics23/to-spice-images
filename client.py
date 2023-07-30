@@ -139,7 +139,7 @@ SPICES = [
 SPICES.sort()
 C = 5
 TRIES = 7
-VERSION = '3-4-0'
+VERSION = '4-0-0'
 CHECK = min(TRIES, 7)
 PREFIX = 'small square paper label'
 SEARCH = 'small square paper label'
